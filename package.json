@@ -1,15 +1,15 @@
 {
   "name": "job-test-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "API testing project with Jest and Supertest",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-  "start": "node src/server.js",
-  "dev": "nodemon src/server.js",
-  "test": "npx --yes jest --runInBand"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "node ./node_modules/jest/bin/jest.js --runInBand"
   },
-  "keywords": [],
+  "keywords": ["jest", "supertest", "api-test", "qa", "backend-test"],
   "author": "",
   "license": "ISC",
   "dependencies": {
