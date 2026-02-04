@@ -5,9 +5,9 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
-    "test": "npx jest --runInBand"
+  "start": "node src/server.js",
+  "dev": "nodemon src/server.js",
+  "test": "npx --yes jest --runInBand"
   },
   "keywords": [],
   "author": "",
