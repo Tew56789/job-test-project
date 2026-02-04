@@ -1,0 +1,26 @@
+module.exports = (req, res, next) => {
+  const { name, email, jobTitle } = req.body;
+
+  // body ว่าง
+  if (!req.body || Object.keys(req.body).length === 0) {
+    return res.status(400).json({ message: "Request body is empty" });
+  }
+
+  // required fields
+  if (!name || !email || !jobTitle) {
+    return res.status(400).json({ message: "Missing required fields" });
+  }
+
+  // name length
+  if (name.length > 100) {
+    return res.status(400).json({ message: "Name is too long" });
+  }
+
+  // email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    return res.status(400).json({ message: "Invalid email format" });
+  }
+
+  next(); // ✅ ผ่าน validation
+};

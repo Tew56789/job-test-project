@@ -7,9 +7,16 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "test": "node ./node_modules/jest/bin/jest.js --runInBand"
+    "test": "node ./node_modules/jest/bin/jest.js --runInBand",
+    "test:coverage": "node ./node_modules/jest/bin/jest.js --coverage"
   },
-  "keywords": ["jest", "supertest", "api-test", "qa", "backend-test"],
+  "keywords": [
+    "jest",
+    "supertest",
+    "api-test",
+    "qa",
+    "tester"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
